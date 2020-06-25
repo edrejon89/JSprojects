@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Reviewer</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Bug Reviewer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="crear.html">Crear</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Bread Crumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <!-- <li class="breadcrumb-item"><a href="#">Home</a></li> -->
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Create</li>
+        </ol>
+    </nav>
+    <!-- Container -->
+    <div id="container" class="container">
+        <section>
+            
+            <div class="content">
+                <header>
+                    <h1>Bug Report</h1>
+                </header>
+                <!-- Form -->
+                <form id="bug-form" class="bug-form">
+                    <div class="form-group">
+                        <label for="project-input" class="form-label">Project</label>
+                        <input type="text" class="form-control" id="project-input"
+                            placeholder="Example input placeholder">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issue-type-input" class="form-label">Issue type</label>
+                        <input type="text" class="form-control" id="issue-type-input"
+                            placeholder="Another input placeholder">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="summary-input" class="form-label">Summary</label>
+                        <input type="text" class="form-control" id="summary-input"
+                            placeholder="Another input placeholder">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description-input">Description</label>
+                        <textarea class="form-control" id="description-input" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="affects-version-input" class="form-label">Affects Version/s</label>
+                        <input type="text" class="form-control" id="affects-version-input"
+                            placeholder="Another input placeholder">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="build-foundin-input" class="form-label">Build found in</label>
+                        <input type="text" class="form-control" id="build-foundin-input"
+                            placeholder="Another input placeholder">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="activity-input">Activity</label>
+                        <select class="form-control" id="activity-input">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-impact-input">Customer Impact</label>
+                        <select class="form-control" id="customer-impact-input">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="platform-input">OS/Platform</label>
+                        <select multiple class="form-control" id="platform-input">
+                            <option>Windows</option>
+                            <option>MacOS</option>
+                            <option>Handheld</option>
+                            <option>iOS</option>
+                            <option>Android</option>
+                            <option>Chrome</option>
+                            <option>Linux</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-10 button-submit">
+                        <button id="btn-submit" type="button" class="btn btn-primary">Create Report</button>
+                    </div>
+                </form>
+                <div class="spacer">
+                    
+
+            </div>
+
+            
+
+        </section>
+        <div id="table-hidden">
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2"><h2>Bug Report</h2></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Project</th>
+                    <td id="td-project"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Issue type</th>
+                    <td id="td-issueType"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Summary</th>
+                    <td id="td-summary"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Description</th>
+                    <td id="td-description"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Affects Version</th>
+                    <td id="td-affectsVersion"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Build found in</th>
+                    <td id="td-buildFoundIn"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Activity</th>
+                    <td id="td-activity"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Customer Impact</th>
+                    <td id="td-customerImpact"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Os/Platform</th>
+                    <td id="td-platform"></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+
+</body>
+
+</html>

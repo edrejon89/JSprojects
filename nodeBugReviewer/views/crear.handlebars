@@ -1,0 +1,147 @@
+<section>
+    <div class="content">
+        <header>
+            <h1>Bug Report</h1>
+        </header>
+        <!-- Form -->
+        <form id="bug-form" class="bug-form">
+            <div class="form-group">
+                <label for="project-input" class="form-label">Project</label>
+                <input type="text" class="form-control" id="project-input" placeholder="Example input placeholder">
+            </div>
+
+            <div class="form-group">
+                <label for="issue-type-input" class="form-label">Issue type</label>
+                <input type="text" class="form-control" id="issue-type-input" placeholder="Another input placeholder">
+            </div>
+
+            <div class="form-group">
+                <label for="summary-input" class="form-label">Summary</label>
+                <input type="text" class="form-control" id="summary-input" placeholder="Another input placeholder">
+            </div>
+
+            <div class="form-group">
+                <label for="description-input">Description</label>
+                <textarea class="form-control" id="description-input" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="affects-version-input" class="form-label">Affects Version/s</label>
+                <input type="text" class="form-control" id="affects-version-input"
+                    placeholder="Another input placeholder">
+            </div>
+
+            <div class="form-group">
+                <label for="build-foundin-input" class="form-label">Build found in</label>
+                <input type="text" class="form-control" id="build-foundin-input"
+                    placeholder="Another input placeholder">
+            </div>
+
+            <div class="form-group">
+                <label for="activity-input">Activity</label>
+                <select class="form-control" id="activity-input">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="customer-impact-input">Customer Impact</label>
+                <select class="form-control" id="customer-impact-input">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="platform-input">OS/Platform</label>
+                <select multiple class="form-control" id="platform-input">
+                    <option>Windows</option>
+                    <option>MacOS</option>
+                    <option>Handheld</option>
+                    <option>iOS</option>
+                    <option>Android</option>
+                    <option>Chrome</option>
+                    <option>Linux</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="col-sm-10 button-submit">
+                <button id="btn-submit" type="button" class="btn btn-primary create-table">Create Report</button>
+            </div>
+        </form>
+        <div class="spacer">
+
+
+        </div>
+
+</section>
+
+
+<div id="table-hidden">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col" colspan="2">
+                    <h2>Bug Report</h2>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Project</th>
+                <td id="td-project"></td>
+            </tr>
+            <tr>
+                <th scope="row">Issue type</th>
+                <td id="td-issueType"></td>
+            </tr>
+            <tr>
+                <th scope="row">Summary</th>
+                <td id="td-summary"></td>
+            </tr>
+            <tr>
+                <th scope="row">Description</th>
+                <td id="td-description"></td>
+            </tr>
+            <tr>
+                <th scope="row">Affects Version</th>
+                <td id="td-affectsVersion"></td>
+            </tr>
+            <tr>
+                <th scope="row">Build found in</th>
+                <td id="td-buildFoundIn"></td>
+            </tr>
+            <tr>
+                <th scope="row">Activity</th>
+                <td id="td-activity"></td>
+            </tr>
+            <tr>
+                <th scope="row">Customer Impact</th>
+                <td id="td-customerImpact"></td>
+            </tr>
+            <tr>
+                <th scope="row">Os/Platform</th>
+                <td id="td-platform"></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="col-sm-10 button-submit">
+        <button id="btn-submit" type="button" class="btn btn-primary go-back">Regresar</button>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="js/manageForm.js"></script>
